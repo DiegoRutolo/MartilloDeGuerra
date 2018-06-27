@@ -8,7 +8,7 @@ public class Profesion {
     private boolean avanzada = false;
     private HashMap<Stat,Integer> stats;
     private String descripcion;
-    private String notas = "";
+    private String notas;
     private HashMap<NomHab, String> habilidades;
     private HashMap<NomTal, String> talentos;
     private String[] enseres;
@@ -20,6 +20,8 @@ public class Profesion {
         this.stats = new HashMap<>();
         this.habilidades = new HashMap<>();
         this.talentos = new HashMap<>();
+        this.notas="";
+        this.descripcion="";
 
         switch (nombre) {
             case PORTADOR_RUNAS:
