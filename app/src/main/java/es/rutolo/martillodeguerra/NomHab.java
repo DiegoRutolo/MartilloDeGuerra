@@ -48,7 +48,7 @@ public enum NomHab {
     SUPERVIVENCIA("Supervivencia"),
     TASAR("Tasar"),
     TORTURA("Tortura"),
-    VENTRILOQUIARA("Ventriloquia");
+    VENTRILOQUIA("Ventriloquia");
 
     private String nombreHabilidad;
 

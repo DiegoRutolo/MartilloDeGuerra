@@ -97,8 +97,169 @@ public class Diccionario {
         talentos.put(NomTal.VOLADOR,new Talento(NomTal.VOLADOR));
 
         habilidades = new HashMap<>();
-
+        habilidades.put(NomHab.ACTUAR,new Habilidad(NomHab.ACTUAR));
+        habilidades.put(NomHab.ADIESTRAR_ANIMALES,new Habilidad(NomHab.ADIESTRAR_ANIMALES));
+        habilidades.put(NomHab.BUSCAR,new Habilidad(NomHab.BUSCAR));
+        habilidades.put(NomHab.CARISMA,new Habilidad(NomHab.CARISMA));
+        habilidades.put(NomHab.CARISMA_ANIMAL,new Habilidad(NomHab.CARISMA_ANIMAL));
+        habilidades.put(NomHab.CANALIZACION,new Habilidad(NomHab.CANALIZACION));
+        habilidades.put(NomHab.CHARLATANERIA,new Habilidad(NomHab.CHARLATANERIA));
+        habilidades.put(NomHab.CODIGO_SECRETO,new Habilidad(NomHab.CODIGO_SECRETO));
+        habilidades.put(NomHab.CONDUCIR,new Habilidad(NomHab.CONDUCIR));
+        habilidades.put(NomHab.CONSUMIR_ALCOHOL,new Habilidad(NomHab.CONSUMIR_ALCOHOL));
+        habilidades.put(NomHab.COTILLEO,new Habilidad(NomHab.COTILLEO));
+        habilidades.put(NomHab.CRIAR_ANIMALES,new Habilidad(NomHab.CRIAR_ANIMALES));
+        habilidades.put(NomHab.DISFRAZ,new Habilidad(NomHab.DISFRAZ));
+        habilidades.put(NomHab.ESCALAR,new Habilidad(NomHab.ESCALAR));
+        habilidades.put(NomHab.ESCONDERSE,new Habilidad(NomHab.ESCONDERSE));
+        habilidades.put(NomHab.ESQUIVAR,new Habilidad(NomHab.ESQUIVAR));
+        habilidades.put(NomHab.FORZAR_CERRADURAS,new Habilidad(NomHab.FORZAR_CERRADURAS));
+        habilidades.put(NomHab.HABLAR_IDIOMA,new Habilidad(NomHab.HABLAR_IDIOMA));
+        habilidades.put(NomHab.HIPNOTISMO,new Habilidad(NomHab.HIPNOTISMO));
+        habilidades.put(NomHab.INTIMIDAR,new Habilidad(NomHab.INTIMIDAR));
+        habilidades.put(NomHab.JUGAR,new Habilidad(NomHab.JUGAR));
+        habilidades.put(NomHab.LEER_ESCRIBIR,new Habilidad(NomHab.LEER_ESCRIBIR));
+        habilidades.put(NomHab.LEER_LABIOS,new Habilidad(NomHab.LEER_LABIOS));
+        habilidades.put(NomHab.LENGUA_ARCANA,new Habilidad(NomHab.LENGUA_ARCANA));
+        habilidades.put(NomHab.LENGUA_SECRETA,new Habilidad(NomHab.LENGUA_SECRETA));
+        habilidades.put(NomHab.MANDO,new Habilidad(NomHab.MANDO));
+        habilidades.put(NomHab.MONTAR,new Habilidad(NomHab.MONTAR));
+        habilidades.put(NomHab.MOVIMIENTO_SILENCIOSO,new Habilidad(NomHab.MOVIMIENTO_SILENCIOSO));
+        habilidades.put(NomHab.NADAR,new Habilidad(NomHab.NADAR));
+        habilidades.put(NomHab.NAVEGAR,new Habilidad(NomHab.NAVEGAR));
+        habilidades.put(NomHab.OFICIO,new Habilidad(NomHab.OFICIO));
+        habilidades.put(NomHab.ORIENTACION,new Habilidad(NomHab.ORIENTACION));
+        habilidades.put(NomHab.PERCEPCION,new Habilidad(NomHab.PERCEPCION));
+        habilidades.put(NomHab.PONER_TRAMPAS,new Habilidad(NomHab.PONER_TRAMPAS));
+        habilidades.put(NomHab.PREPARAR_VENENOS,new Habilidad(NomHab.PREPARAR_VENENOS));
+        habilidades.put(NomHab.PRESTIDIGITACION,new Habilidad(NomHab.PRESTIDIGITACION));
+        habilidades.put(NomHab.RASTREAR,new Habilidad(NomHab.RASTREAR));
+        habilidades.put(NomHab.REGATEAR,new Habilidad(NomHab.REGATEAR));
+        habilidades.put(NomHab.REMAR,new Habilidad(NomHab.REMAR));
+        habilidades.put(NomHab.SABIDURIA_ACADEMICA,new Habilidad(NomHab.SABIDURIA_ACADEMICA));
+        habilidades.put(NomHab.SABIDURIA_POPULAR,new Habilidad(NomHab.SABIDURIA_POPULAR));
+        habilidades.put(NomHab.SANAR,new Habilidad(NomHab.SANAR));
+        habilidades.put(NomHab.SEGUIMIENTO,new Habilidad(NomHab.SEGUIMIENTO));
+        habilidades.put(NomHab.SENTIR_MAGIA,new Habilidad(NomHab.SENTIR_MAGIA));
+        habilidades.put(NomHab.SUPERVIVENCIA,new Habilidad(NomHab.SUPERVIVENCIA));
+        habilidades.put(NomHab.TASAR,new Habilidad(NomHab.TASAR));
+        habilidades.put(NomHab.TORTURA,new Habilidad(NomHab.TORTURA));
+        habilidades.put(NomHab.VENTRILOQUIA,new Habilidad(NomHab.VENTRILOQUIA));
+        
         profesiones = new HashMap<>();
+        profesiones.put(NomProf.ALBOROTADOR,new Profesion(NomProf.ALBOROTADOR));
+        profesiones.put(NomProf.APRENDIZ_HECHICERO,new Profesion(NomProf.APRENDIZ_HECHICERO));
+        profesiones.put(NomProf.ALGUACIL,new Profesion(NomProf.ALGUACIL));
+        profesiones.put(NomProf.ARTISTA,new Profesion(NomProf.ARTISTA));
+        profesiones.put(NomProf.AYUDANTE_CAMARA,new Profesion(NomProf.AYUDANTE_CAMARA));
+        profesiones.put(NomProf.BARQUERO,new Profesion(NomProf.BARQUERO));
+        profesiones.put(NomProf.BARBERO_CIRUJANO,new Profesion(NomProf.BARBERO_CIRUJANO));
+        profesiones.put(NomProf.BATELERO,new Profesion(NomProf.BATELERO));
+        profesiones.put(NomProf.BERSERKER,new Profesion(NomProf.BERSERKER));
+        profesiones.put(NomProf.BURGUES,new Profesion(NomProf.BURGUES));
+        profesiones.put(NomProf.BRIBON,new Profesion(NomProf.BRIBON));
+        profesiones.put(NomProf.CAMPESINO,new Profesion(NomProf.CAMPESINO));
+        profesiones.put(NomProf.CARBONERO,new Profesion(NomProf.CARBONERO));
+        profesiones.put(NomProf.CAZADOR,new Profesion(NomProf.CAZADOR));
+        profesiones.put(NomProf.CARCELERO,new Profesion(NomProf.CARCELERO));
+        profesiones.put(NomProf.CAZARRATAS,new Profesion(NomProf.CAZARRATAS));
+        profesiones.put(NomProf.CAZARRECOMPENSAS,new Profesion(NomProf.CAZARRECOMPENSAS));
+        profesiones.put(NomProf.CONTRABANDISTA,new Profesion(NomProf.CONTRABANDISTA));
+        profesiones.put(NomProf.COCHERO,new Profesion(NomProf.COCHERO));
+        profesiones.put(NomProf.EMBAJADOR,new Profesion(NomProf.EMBAJADOR));
+        profesiones.put(NomProf.ESCOLTA,new Profesion(NomProf.ESCOLTA));
+        profesiones.put(NomProf.ESCUDERO,new Profesion(NomProf.ESCUDERO));
+        profesiones.put(NomProf.ESCRIBA,new Profesion(NomProf.ESCRIBA));
+        profesiones.put(NomProf.ESPADACHIN,new Profesion(NomProf.ESPADACHIN));
+        profesiones.put(NomProf.ESTUDIANTE,new Profesion(NomProf.ESTUDIANTE));
+        profesiones.put(NomProf.FORAJIDO,new Profesion(NomProf.FORAJIDO));
+        profesiones.put(NomProf.FANATICO,new Profesion(NomProf.FANATICO));
+        profesiones.put(NomProf.GLADIADOR,new Profesion(NomProf.GLADIADOR));
+        profesiones.put(NomProf.GUERRERO_CAMARILLA,new Profesion(NomProf.GUERRERO_CAMARILLA));
+        profesiones.put(NomProf.GUARDIA_MARINA,new Profesion(NomProf.GUARDIA_MARINA));
+        profesiones.put(NomProf.GUARDAESPALDAS,new Profesion(NomProf.GUARDAESPALDAS));
+        profesiones.put(NomProf.HECHICERO_VULGAR,new Profesion(NomProf.HECHICERO_VULGAR));
+        profesiones.put(NomProf.INICIADO,new Profesion(NomProf.INICIADO));
+        profesiones.put(NomProf.LADRON,new Profesion(NomProf.LADRON));
+        profesiones.put(NomProf.KOSSAR,new Profesion(NomProf.KOSSAR));
+        profesiones.put(NomProf.LADRON_TUMBAS,new Profesion(NomProf.LADRON_TUMBAS));
+        profesiones.put(NomProf.LENADOR,new Profesion(NomProf.LENADOR));
+        profesiones.put(NomProf.MATATROLLS,new Profesion(NomProf.MATATROLLS));
+        profesiones.put(NomProf.MARINERO,new Profesion(NomProf.MARINERO));
+        profesiones.put(NomProf.MATON,new Profesion(NomProf.MATON));
+        profesiones.put(NomProf.MENESTRAL,new Profesion(NomProf.MENESTRAL));
+        profesiones.put(NomProf.MERCENARIO,new Profesion(NomProf.MERCENARIO));
+        profesiones.put(NomProf.MENSAJERO,new Profesion(NomProf.MENSAJERO));
+        profesiones.put(NomProf.MIEMBRO_SEQUITO,new Profesion(NomProf.MIEMBRO_SEQUITO));
+        profesiones.put(NomProf.MILICIANO,new Profesion(NomProf.MILICIANO));
+        profesiones.put(NomProf.NOBLE,new Profesion(NomProf.NOBLE));
+        profesiones.put(NomProf.MINERO,new Profesion(NomProf.MINERO));
+        profesiones.put(NomProf.OSAMENTERO,new Profesion(NomProf.OSAMENTERO));
+        profesiones.put(NomProf.PATRULLA_CAMINOS,new Profesion(NomProf.PATRULLA_CAMINOS));
+        profesiones.put(NomProf.PEAJERO,new Profesion(NomProf.PEAJERO));
+        profesiones.put(NomProf.PATRULLA_FRONTERIZA,new Profesion(NomProf.PATRULLA_FRONTERIZA));
+        profesiones.put(NomProf.PESCADOR,new Profesion(NomProf.PESCADOR));
+        profesiones.put(NomProf.PORTADOR_RUNAS,new Profesion(NomProf.PORTADOR_RUNAS));
+        profesiones.put(NomProf.SAQUEADOR_TUMBAS,new Profesion(NomProf.SAQUEADOR_TUMBAS));
+        profesiones.put(NomProf.ROMPESCUDO,new Profesion(NomProf.ROMPESCUDO));
+        profesiones.put(NomProf.SICARIO,new Profesion(NomProf.SICARIO));
+        profesiones.put(NomProf.SIRVIENTE,new Profesion(NomProf.SIRVIENTE));
+        profesiones.put(NomProf.VAGABUNDO,new Profesion(NomProf.VAGABUNDO));
+        profesiones.put(NomProf.SOLDADO,new Profesion(NomProf.SOLDADO));
+        profesiones.put(NomProf.VIGILANTE,new Profesion(NomProf.VIGILANTE));
+        profesiones.put(NomProf.ARTESANO,new Profesion(NomProf.ARTESANO));
+        profesiones.put(NomProf.ADMINISTRADOR,new Profesion(NomProf.ADMINISTRADOR));
+        profesiones.put(NomProf.ASESINO,new Profesion(NomProf.ASESINO));
+        profesiones.put(NomProf.BATIDOR,new Profesion(NomProf.BATIDOR));
+        profesiones.put(NomProf.CABALLERO_INTERIOR,new Profesion(NomProf.CABALLERO_INTERIOR));
+        profesiones.put(NomProf.CABALLERO,new Profesion(NomProf.CABALLERO));
+        profesiones.put(NomProf.CAMPEON_JUDICIAL,new Profesion(NomProf.CAMPEON_JUDICIAL));
+        profesiones.put(NomProf.CAPITAN,new Profesion(NomProf.CAPITAN));
+        profesiones.put(NomProf.CAZADOR_BRUJAS,new Profesion(NomProf.CAZADOR_BRUJAS));
+        profesiones.put(NomProf.CAPITAN_BARCO,new Profesion(NomProf.CAPITAN_BARCO));
+        profesiones.put(NomProf.CAZADOR_INVISIBLE,new Profesion(NomProf.CAZADOR_INVISIBLE));
+        profesiones.put(NomProf.CAZAVAMPIROS,new Profesion(NomProf.CAZAVAMPIROS));
+        profesiones.put(NomProf.CORTESANO,new Profesion(NomProf.CORTESANO));
+        profesiones.put(NomProf.CHARLATAN,new Profesion(NomProf.CHARLATAN));
+        profesiones.put(NomProf.DEMAGOGO,new Profesion(NomProf.DEMAGOGO));
+        profesiones.put(NomProf.DUELISTA,new Profesion(NomProf.DUELISTA));
+        profesiones.put(NomProf.ESPIA,new Profesion(NomProf.ESPIA));
+        profesiones.put(NomProf.ERUDITO,new Profesion(NomProf.ERUDITO));
+        profesiones.put(NomProf.EXPLORADOR,new Profesion(NomProf.EXPLORADOR));
+        profesiones.put(NomProf.EXTORSIONADOR,new Profesion(NomProf.EXTORSIONADOR));
+        profesiones.put(NomProf.FRAILE,new Profesion(NomProf.FRAILE));
+        profesiones.put(NomProf.FLAGELANTE,new Profesion(NomProf.FLAGELANTE));
+        profesiones.put(NomProf.GALENO,new Profesion(NomProf.GALENO));
+        profesiones.put(NomProf.GRAN_HECHICERO,new Profesion(NomProf.GRAN_HECHICERO));
+        profesiones.put(NomProf.HECHICERO_MAESTRO,new Profesion(NomProf.HECHICERO_MAESTRO));
+        profesiones.put(NomProf.HECHICERO_ADEPTO,new Profesion(NomProf.HECHICERO_ADEPTO));
+        profesiones.put(NomProf.HERALDO,new Profesion(NomProf.HERALDO));
+        profesiones.put(NomProf.HEROE,new Profesion(NomProf.HEROE));
+        profesiones.put(NomProf.INGENIERO,new Profesion(NomProf.INGENIERO));
+        profesiones.put(NomProf.HERRERUELO,new Profesion(NomProf.HERRERUELO));
+        profesiones.put(NomProf.INTERROGADOR,new Profesion(NomProf.INTERROGADOR));
+        profesiones.put(NomProf.JEFE_FORAJIDOS,new Profesion(NomProf.JEFE_FORAJIDOS));
+        profesiones.put(NomProf.LADRON_GUANTE_BLANCO,new Profesion(NomProf.LADRON_GUANTE_BLANCO));
+        profesiones.put(NomProf.JUGLAR,new Profesion(NomProf.JUGLAR));
+        profesiones.put(NomProf.LADRON_EXPERTO,new Profesion(NomProf.LADRON_EXPERTO));
+        profesiones.put(NomProf.MAESTRO_GREMIO,new Profesion(NomProf.MAESTRO_GREMIO));
+        profesiones.put(NomProf.MATAGIGANTES,new Profesion(NomProf.MATAGIGANTES));
+        profesiones.put(NomProf.MATADEMONIOS,new Profesion(NomProf.MATADEMONIOS));
+        profesiones.put(NomProf.MERCADER,new Profesion(NomProf.MERCADER));
+        profesiones.put(NomProf.NAVEGANTE,new Profesion(NomProf.NAVEGANTE));
+        profesiones.put(NomProf.POLITICO,new Profesion(NomProf.POLITICO));
+        profesiones.put(NomProf.PERISTA,new Profesion(NomProf.PERISTA));
+        profesiones.put(NomProf.POSADERO,new Profesion(NomProf.POSADERO));
+        profesiones.put(NomProf.SACERDOTE,new Profesion(NomProf.SACERDOTE));
+        profesiones.put(NomProf.SALTEADOR_CAMINOS,new Profesion(NomProf.SALTEADOR_CAMINOS));
+        profesiones.put(NomProf.SACERDOTE_UNGIDO,new Profesion(NomProf.SACERDOTE_UNGIDO));
+        profesiones.put(NomProf.SARGENTO,new Profesion(NomProf.SARGENTO));
+        profesiones.put(NomProf.SEGUNDO_BORDO,new Profesion(NomProf.SEGUNDO_BORDO));
+        profesiones.put(NomProf.SENOR_NOBLE,new Profesion(NomProf.SENOR_NOBLE));
+        profesiones.put(NomProf.SENOR_CRIMEN,new Profesion(NomProf.SENOR_CRIMEN));
+        profesiones.put(NomProf.SUMO_SACERDOTE,new Profesion(NomProf.SUMO_SACERDOTE));
+        profesiones.put(NomProf.TIRADOR,new Profesion(NomProf.TIRADOR));
+        profesiones.put(NomProf.VETERANO,new Profesion(NomProf.VETERANO));
     }
 
     public static Diccionario getInstancia(){
@@ -110,6 +271,14 @@ public class Diccionario {
 
     public HashMap<NomTal, Talento> getTalentos() {
         return talentos;
+    }
+
+    public HashMap<NomHab, Habilidad> getHabilidades() {
+        return habilidades;
+    }
+
+    public HashMap<NomProf, Profesion> getProfesiones() {
+        return profesiones;
     }
 }
 
