@@ -8,69 +8,22 @@ public class Profesion {
     private boolean avanzada = false;
     private HashMap<Stat,Integer> stats;
     private String descripcion;
-    private String notas;
-    private String[] habilidades;
-    private String[] talentos;
+    private String notas = "";
+    private HashMap<NomHab, String> habilidades;
+    private HashMap<NomTal, String> talentos;
     private String[] enseres;
-    private Profesion[] accesos;
-    private Profesion[] salidas;
+    private NomProf[] accesos;
+    private NomProf[] salidas;
 
     public Profesion(NomProf nombre) {
-        this.stats = new HashMap<>();
         this.nombre = nombre.toString();
+        this.stats = new HashMap<>();
+        this.habilidades = new HashMap<>();
+        this.talentos = new HashMap<>();
 
         switch (nombre) {
-            case ALBOROTADOR:
-                stats.put(Stat.HA, 5);
-                stats.put(Stat.HP, 5);
-                stats.put(Stat.Ag, 5);
-                stats.put(Stat.I, 10);
-                stats.put(Stat.Em, 10);
-                stats.put(Stat.H, 2);
-                habilidades = new String[]{
-                        "Carisma", "Esconderse", "Hablar idioma (Bretón o Tileano)",
-                        "Hablar idioma (Reikspiel)", "Leer/escribir", "Percepción",
-                        "Sabiduría académica (Historia) o Cotilleo",
-                        "Sabiduría académica (Leyes) o Sabiduría popular (Imperio)"
-                };
-                talentos = new String[]{
-                        "¡A correr!", "Don de gentes", "Sangre fría o Pelea calejera"
-                };
-                enseres = new String[]{
-                        "Armadura ligera (chaqueta de cuero)",
-                        "Muda de ropa de buena artesanía",
-                        "2d10 octavillas para causas diversas"
-                };
-                accesos = new Profesion[]{
-                        new Profesion(NomProf.BURGUES),
-                        new Profesion(NomProf.CAPITAN),
-                        new Profesion(NomProf.ESCRIBA),
-                        new Profesion(NomProf.ESTUDIANTE),
-                        new Profesion(NomProf.FANATICO),
-                        new Profesion(NomProf.HERALDO),
-                        new Profesion(NomProf.SALTEADOR_CAMINOS),
-                        new Profesion(NomProf.SIRVIENTE)
-                };
-                salidas = new Profesion[]{
-                        new Profesion(NomProf.BRIBON),
-                        new Profesion(NomProf.CHARLATAN),
-                        new Profesion(NomProf.DEMAGOGO),
-                        new Profesion(NomProf.FANATICO),
-                        new Profesion(NomProf.FORAJIDO),
-                        new Profesion(NomProf.POLITICO)
-                };
-                break;
-
-            /*case "Cazarratas":
-                stats_primarios[0] = 5;
-                stats_primarios[1] = 10;
-                stats_primarios[3] = 5;
-                stats_primarios[4] = 10;
-                stats_primarios[6] = 10;
-                stats_secundarios[1] = 2;
-                habilidades = new String[]*/
-
             case PORTADOR_RUNAS:
+                notas = "Solo los enanos pueden acceder a esta profesion";
                 stats.put(Stat.HA, 10);
                 stats.put(Stat.F, 5);
                 stats.put(Stat.R, 5);
@@ -79,31 +32,37 @@ public class Profesion {
                 stats.put(Stat.V, 5);
                 stats.put(Stat.H, 2);
                 stats.put(Stat.M, 1);
-                habilidades = new String[]{
-                        "Código secreto (Batidor)", "Esquivar", "Nadar", "Orientación",
-                        "Percepción", "Supervivencia"
-                };
-                talentos = new String[]{
-                        "¡A correr!", "Muy resistente o Muy fuerte", "Orientación",
-                        "Pies ligeros o Sexto sentido", "Recarga rápida"
-                };
+                habilidades.put(NomHab.CODIGO_SECRETO, "Batidor");
+                habilidades.put(NomHab.ESQUIVAR, "");
+                habilidades.put(NomHab.NADAR, "");
+                habilidades.put(NomHab.ORIENTACION, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SUPERVIVENCIA, "");
+                talentos.put(NomTal.A_CORRER, "");
+                talentos.put(NomTal.MUY_RESISTENTE, "");
+                talentos.put(NomTal.MUY_FUERTE, "");
+                talentos.put(NomTal.ORIENTACION, "");
+                talentos.put(NomTal.PIES_LIGEROS, "");
+                talentos.put(NomTal.SEXTO_SENTIDO, "");
+                talentos.put(NomTal.RECARGA_RAPIDA, "");
                 enseres = new String[]{
                         "Ballesta con 10 virotes",
                         "Armadura ligera (justillo de cuero)", "Poción curativa",
                         "Amuleto de buena suerte"
                 };
-                accesos = new Profesion[]{
-                        new Profesion(NomProf.ROMPESCUDO)
+                accesos = new NomProf[]{
+                        NomProf.ROMPESCUDO
                 };
-                salidas = new Profesion[]{
-                        new Profesion(NomProf.BATIDOR),
-                        new Profesion(NomProf.CAZARRATAS),
-                        new Profesion(NomProf.ROMPESCUDO),
-                        new Profesion(NomProf.VETERANO)
+                salidas = new NomProf[]{
+                        NomProf.BATIDOR,
+                        NomProf.CAZARRATAS,
+                        NomProf.ROMPESCUDO,
+                        NomProf.VETERANO
                 };
                 break;
 
             case ROMPESCUDO:
+                notas = "Solo los enanos pueden tener Rompescudos como profesión inicial";
                 stats.put(Stat.HA, 10);
                 stats.put(Stat.F, 5);
                 stats.put(Stat.R, 5);
@@ -111,34 +70,38 @@ public class Profesion {
                 stats.put(Stat.V, 5);
                 stats.put(Stat.A, 1);
                 stats.put(Stat.H, 2);
-                habilidades = new String[]{
-                        "Escalar", "Esquivar", "Orientación", "Percepción", "Seguimiento"
-                };
-                talentos = new String[]{
-                        "Golpe conmocionador", "Golpe letal", "Golpe poderoso",
-                        "Oido agudo o Sangre fría", "Orientación"
-                };
+                habilidades.put(NomHab.ESCALAR, "");
+                habilidades.put(NomHab.ESQUIVAR, "");
+                habilidades.put(NomHab.ORIENTACION, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SEGUIMIENTO, "");
+                talentos.put(NomTal.GOLPE_CONMOCIONADOR, "");
+                talentos.put(NomTal.GOLPE_LETAL, "");
+                talentos.put(NomTal.GOLPE_PODEROSO, "");
+                talentos.put(NomTal.OIDO_AGUZADO, "");
+                talentos.put(NomTal.SANGRE_FRIA, "");
+                talentos.put(NomTal.ORIENTACION, "");
                 enseres = new String[]{
                         "Ballesta con 10 virotes",
                         "Armadura media (cota de malla, chaqueta de cuero y grebas de cuero",
                         "Escudo", "Gancho de escalada", "10m de cuerda", "Odre"
                 };
-                accesos = new Profesion[]{
-                        new Profesion(NomProf.CAZARRATAS),
-                        new Profesion(NomProf.CONTRABANDISTA),
-                        new Profesion(NomProf.KOSSAR),
-                        new Profesion(NomProf.MERCENARIO),
-                        new Profesion(NomProf.MINERO),
-                        new Profesion(NomProf.PORTADOR_RUNAS),
-                        new Profesion(NomProf.SAQUEADOR_TUMBAS)
+                accesos = new NomProf[]{
+                        NomProf.CAZARRATAS,
+                        NomProf.CONTRABANDISTA,
+                        NomProf.KOSSAR,
+                        NomProf.MERCENARIO,
+                        NomProf.MINERO,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.SAQUEADOR_TUMBAS
                 };
-                salidas = new Profesion[]{
-                        new Profesion(NomProf.CONTRABANDISTA),
-                        new Profesion(NomProf.GLADIADOR),
-                        new Profesion(NomProf.PORTADOR_RUNAS),
-                        new Profesion(NomProf.ROMPESCUDO),
-                        new Profesion(NomProf.SARGENTO),
-                        new Profesion(NomProf.VETERANO)
+                salidas = new NomProf[]{
+                        NomProf.CONTRABANDISTA,
+                        NomProf.GLADIADOR,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.ROMPESCUDO,
+                        NomProf.SARGENTO,
+                        NomProf.VETERANO
                 };
                 break;
 
@@ -173,11 +136,11 @@ public class Profesion {
         return notas;
     }
 
-    public String[] getHabilidades() {
+    public HashMap<NomHab, String> getHabilidades() {
         return habilidades;
     }
 
-    public String[] getTalentos() {
+    public HashMap<NomTal, String> getTalentos() {
         return talentos;
     }
 
@@ -185,11 +148,11 @@ public class Profesion {
         return enseres;
     }
 
-    public Profesion[] getAccesos() {
+    public NomProf[] getAccesos() {
         return accesos;
     }
 
-    public Profesion[] getSalidas() {
+    public NomProf[] getSalidas() {
         return salidas;
     }
 }
