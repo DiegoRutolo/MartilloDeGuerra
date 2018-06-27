@@ -15,7 +15,7 @@ public class VistaProfesion extends AppCompatActivity {
         Intent intent = getIntent();
         String nombre_profesion = intent.getStringExtra("prof");
 
-        Profesion foco = new Profesion(nombre_profesion);
+        Profesion foco = new Profesion(NomProf.valueOf(nombre_profesion));
 
         TextView text = findViewById(R.id.textView3);
 

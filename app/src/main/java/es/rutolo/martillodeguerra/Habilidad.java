@@ -68,7 +68,7 @@ public class Habilidad {
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
-                nota="";    // TODO Completar este "Varios": batidor, templario, ladron, montaraz
+                nota="";    // TODO Varios: batidor, templario, ladron, montaraz
                 break;
             case CONDUCIR:
                 avanzada=false;
