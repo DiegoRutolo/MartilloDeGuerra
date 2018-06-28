@@ -122,8 +122,18 @@ public enum NomProf{
     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         return nombreProfesion;
+    }
+    
+    public static NomProf getNombre(String texto) {
+        NomProf valor = null;
+        for (NomProf i : NomProf.values()) {
+            if (i.toString().equals(texto)) {
+                valor = i;
+            }
+        }
+        return valor;
     }
 }
 

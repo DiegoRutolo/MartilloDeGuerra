@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayAdapter<NomProf> adapter = new ArrayAdapter<NomProf>(this, android.R.layout.simple_dropdown_item_1line, NomProf.values());
-        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.profesion);
+        ArrayAdapter<NomProf> adapter = new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, NomProf.values());
+        AutoCompleteTextView textView = findViewById(R.id.profesion);
         textView.setAdapter(adapter);
     }
 

@@ -13,16 +13,11 @@ public class VistaProfesion extends AppCompatActivity {
         setContentView(R.layout.activity_vista_profesion);
 
         Intent intent = getIntent();
-        String nombre_profesion = intent.getStringExtra("prof");
-
-        Profesion foco = new Profesion(NomProf.valueOf(nombre_profesion));
-
         TextView text = findViewById(R.id.textView3);
 
-        if (foco.isValida()) {
-            text.setText(foco.getNombre());
-        } else {
-            text.setText("Profesión pendiente de implementación");
-        }
+        NomProf nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
+        Profesion profesionCentral = new Profesion(nomProf);
+
+        text.setText(profesionCentral.getNombre());
     }
 }
