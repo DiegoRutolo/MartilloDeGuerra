@@ -23,7 +23,7 @@ public class Profesion {
         this.notas="";
         this.descripcion="";
 
-        switch (nombre) {
+        switch (nombre) {   // TODO Completar profesiones
             case PORTADOR_RUNAS:
                 notas = "Solo los enanos pueden acceder a esta profesion";
                 stats.put(Stat.HA, 10);
