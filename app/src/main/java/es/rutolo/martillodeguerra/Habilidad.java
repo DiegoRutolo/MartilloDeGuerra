@@ -330,7 +330,7 @@ public class Habilidad {
                 talentos.add(NomTal.AMENAZADOR);
                 
                 break;
-            case VENTRILOQUIARA:
+            case VENTRILOQUIA:
                 avanzada=true;
                 caracteristica=Stat.Em;
                 descripcion="";
