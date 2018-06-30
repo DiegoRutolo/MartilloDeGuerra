@@ -32,6 +32,10 @@ public class NavegacionProfesiones extends AppCompatActivity {
             profCentral.setText("Pendiente de implementación");
             profCentral.setOnClickListener(null);
         }
+
+        TextView salida1 = findViewById(R.id.salida1);
+        salida1.setText(profesion.getSalidas()[0].toString());
+        salida1.setVisibility(View.VISIBLE);
     }
 
     public void abreDetalles(View view) {
