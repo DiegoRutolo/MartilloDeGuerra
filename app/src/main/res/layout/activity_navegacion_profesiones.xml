@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:onClick="abreDetalles"
         android:text="TextView"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
