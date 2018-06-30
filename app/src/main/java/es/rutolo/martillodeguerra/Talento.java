@@ -1,5 +1,8 @@
 package es.rutolo.martillodeguerra;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 public class Talento {
     private NomTal nombre;
     private String descripcion;
@@ -8,31 +11,31 @@ public class Talento {
         this.nombre = nombre;
         switch (this.nombre){
             case A_CORRER:
-                descripcion="";
+                descripcion="Cuando tu vida está en peligro puedes alcanzar velocidades de vértigo. Cada vez que huyas de un combate o de cualquier otra amenaza funesta, recibes un +1 a tu característica de Movimiento durante 1d10 asaltos.";
                 break;
             case AFINIDAD_AETHYR:
-                descripcion="";
+                descripcion="Estas en armonía con el Aethyr y tienes más facilidad para manipular los vientos de la magia. Recibes un +10% a todas las tiradas de Canalización y Sentir Magia.";
                 break;
             case AMBIDIESTRO:
-                descripcion="";
+                descripcion="Puedes usar ambas manos con la misma habilidad. No sufres la penalización habitual del -20% a la HA o la HP por usar un arma con la mano tonta.";
                 break;
             case AMENAZADOR:
-                descripcion="";
+                descripcion="Tienes una presencia imponente debido a tu tamaño, tu comportamiento o tu aspecto. Recibes un +10% a todas las tiradas de Intimidar o Tortura.";
                 break;
             case ARMAS_NATURALES:
-                descripcion="";
+                descripcion="Tienes garras o dientes enormes con los que puedes desgarrar a tus enemigos en combate. Cada vez que ataques sin armas se considerará que estas equipado con un arma de mano. No puedes parar ataques con tus armas naturales y, por razones obvias, tampoco pueden desarmarte";
                 break;
             case ARTESANIA_ENANA:
-                descripcion="";
+                descripcion="Los miembros de tu raza son Artesanos Naturales. Recibes un +10% a todas las tiradas de los siguientes Oficios: Arcabucero, Armero, Cantero, Cervecero, Forjador de Armaduras, Herrero, Joyero y Minero";
                 break;
             case ATERRADOR:
-                descripcion="";
+                descripcion="Un vistazo a tu monstruoso rostro basta para poner en fuga a tus enemigos. Causas Terror, tal y como se explica en el Capítulo 9: El Director de Juego.";
                 break;
             case AUDAZ:
-                descripcion="";
+                descripcion="Eres extraordinariamente valiente. Recibes un +10% a todas las tiradas de Miedo y Terror, así como a las tiradas de Voluntad para resistir intentos de intimidación.";
                 break;
             case BRIOSO:
-                descripcion="";
+                descripcion="Eres un ágil luchador. Puedes usar la acción de Salto como media acción, y la distancia de todos tus saltos horizontales aumenta un metro";
                 break;
             case CALLEJEO:
                 descripcion="";
@@ -257,5 +260,13 @@ public class Talento {
                 descripcion="";
                 break;
         }
+    }
+
+    public NomTal getNombre() {
+        return nombre;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
     }
 }

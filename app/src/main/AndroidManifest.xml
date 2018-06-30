@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".VistaProfesion" />
-        <activity android:name=".NavegacionProfesiones"></activity>
+        <activity android:name=".VistaHabilidad" />
+        <activity android:name=".VistaTalento"></activity>
+        <activity android:name=".VistaNavegacionProfesiones"></activity>
     </application>
 
 </manifest>

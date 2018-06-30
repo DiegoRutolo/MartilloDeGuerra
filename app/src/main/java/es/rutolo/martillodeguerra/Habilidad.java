@@ -1,7 +1,9 @@
 package es.rutolo.martillodeguerra;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class Habilidad {
     private NomHab nombre;
@@ -20,7 +22,6 @@ public class Habilidad {
                 descripcion="";
                 talentos.add(NomTal.CONTORSIONISTA);
                 talentos.add(NomTal.IMITADOR);
-                
                 break;
             case ADIESTRAR_ANIMALES:
                 avanzada=true;
@@ -338,6 +339,26 @@ public class Habilidad {
                 break;
         }
 
+    }
+
+    public NomHab getNombre() {
+        return nombre;
+    }
+
+    public boolean isAvanzada() {
+        return avanzada;
+    }
+
+    public Stat getCaracteristica() {
+        return caracteristica;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public ArrayList<NomTal> getTalentos() {
+        return talentos;
     }
 }
 

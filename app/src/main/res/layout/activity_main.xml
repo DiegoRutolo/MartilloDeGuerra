@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <AutoCompleteTextView
-        android:id="@+id/profesion"
+        android:id="@+id/buscador"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -21,17 +21,59 @@
         app:layout_constraintVertical_bias="0.23000002" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:text="Profesión"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/profesion"
+        app:layout_constraintBottom_toTopOf="@+id/buscador"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Profesión" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:checkedButton="@id/rbtnProfesion"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/buscador"
+        app:layout_constraintStart_toStartOf="@+id/buscador"
+        app:layout_constraintTop_toBottomOf="@+id/buscador">
+
+        <RadioButton
+            android:id="@+id/rbtnProfesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="cambiaFiltro"
+            android:text="Profesion" />
+
+        <RadioButton
+            android:id="@+id/rbtnHabilidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="cambiaFiltro"
+            android:text="Habilidad" />
+
+        <RadioButton
+            android:id="@+id/rbtnTalento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="cambiaFiltro"
+            android:text="Talento" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/verTodo"
@@ -39,14 +81,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Ver todo"
-        app:layout_constraintEnd_toStartOf="@+id/buscar"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profesion"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
         tools:text="Ver todo" />
 
     <Button
-        android:id="@+id/buscar"
+        android:id="@+id/btnBuscar"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
         android:layout_marginLeft="32dp"

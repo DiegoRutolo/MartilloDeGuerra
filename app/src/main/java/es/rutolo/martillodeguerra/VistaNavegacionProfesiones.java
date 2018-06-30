@@ -1,18 +1,15 @@
 package es.rutolo.martillodeguerra;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-import java.io.Serializable;
+public class VistaNavegacionProfesiones extends AppCompatActivity {
 
-public class NavegacionProfesiones extends AppCompatActivity {
-
-    private Profesion profesion;
+    private NomProf nomProf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +20,8 @@ public class NavegacionProfesiones extends AppCompatActivity {
         setContentView(R.layout.activity_navegacion_profesiones);
 
         Intent intent = getIntent();
-        NomProf nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
-        profesion = new Profesion(nomProf);
+        nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
+        Profesion profesion = Diccionario.getInstancia().getProfesiones().get(nomProf);
         TextView profCentral = findViewById(R.id.profCentral);
         if (profesion.isValida()) {
             profCentral.setText(nomProf.toString());
@@ -39,8 +36,8 @@ public class NavegacionProfesiones extends AppCompatActivity {
     }
 
     public void abreDetalles(View view) {
-        Intent verDetalles = new Intent(NavegacionProfesiones.this, VistaProfesion.class);
-        verDetalles.putExtra("prof", profesion);
-        NavegacionProfesiones.this.startActivity(verDetalles);
+        Intent verDetalles = new Intent(VistaNavegacionProfesiones.this, VistaProfesion.class);
+        verDetalles.putExtra("prof", nomProf.toString());
+        VistaNavegacionProfesiones.this.startActivity(verDetalles);
     }
 }

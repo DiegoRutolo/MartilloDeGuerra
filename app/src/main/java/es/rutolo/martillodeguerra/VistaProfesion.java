@@ -20,8 +20,9 @@ public class VistaProfesion extends AppCompatActivity {
         setContentView(R.layout.activity_vista_profesion);
 
         Intent intent = getIntent();
-        Profesion profesion = (Profesion) intent.getParcelableExtra("prof");
-        TextView text = findViewById(R.id.nombreGrande);
+        NomProf nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
+        Profesion profesion = Diccionario.getInstancia().getProfesiones().get(nomProf);
+        TextView text = findViewById(R.id.tvNombreGrande);
 
         // Escribe el nombre
         text.setText(profesion.getNombre());

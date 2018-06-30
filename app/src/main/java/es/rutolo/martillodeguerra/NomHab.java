@@ -60,5 +60,15 @@ public enum NomHab {
     public String toString() {
         return nombreHabilidad;
     }
+
+    public static NomHab getNombre(String texto) {
+        NomHab valor = null;
+        for (NomHab i : NomHab.values()) {
+            if (i.toString().equals(texto)) {
+                valor = i;
+            }
+        }
+        return valor;
+    }
 }
 

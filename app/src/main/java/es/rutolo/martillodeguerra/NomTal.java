@@ -95,5 +95,15 @@ public enum NomTal {
     public String toString() {
         return nombreTalento;
     }
+
+    public static NomTal getNombre(String texto) {
+        NomTal valor = null;
+        for (NomTal i : NomTal.values()) {
+            if (i.toString().equals(texto)) {
+                valor = i;
+            }
+        }
+        return valor;
+    }
 }
 
