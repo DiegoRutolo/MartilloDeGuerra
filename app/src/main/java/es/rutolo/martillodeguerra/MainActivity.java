@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         TextView text = findViewById(R.id.profesion);
         String msg = text.getText().toString();
 
-        Intent verProfesion = new Intent(MainActivity.this, VistaProfesion.class);
-        verProfesion.putExtra("prof", msg);
-        MainActivity.this.startActivity(verProfesion);
+        Intent verProfesiones = new Intent(MainActivity.this, NavegacionProfesiones.class);
+        verProfesiones.putExtra("prof", msg);
+        MainActivity.this.startActivity(verProfesiones);
     }
 }

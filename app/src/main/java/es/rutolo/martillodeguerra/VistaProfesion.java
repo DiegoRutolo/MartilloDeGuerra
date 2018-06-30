@@ -19,13 +19,11 @@ public class VistaProfesion extends AppCompatActivity {
         // this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_vista_profesion);
 
-
         Intent intent = getIntent();
-        TextView text = findViewById(R.id.nombreCentral);
+        Profesion profesion = (Profesion) intent.getParcelableExtra("prof");
+        TextView text = findViewById(R.id.nombreGrande);
 
-        NomProf nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
-        Profesion profesionCentral = new Profesion(nomProf);
-
-        text.setText(profesionCentral.getNombre());
+        // Escribe el nombre
+        text.setText(profesion.getNombre());
     }
 }

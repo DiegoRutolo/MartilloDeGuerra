@@ -1,12 +1,15 @@
 package es.rutolo.martillodeguerra;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.HashMap;
 
-public class Profesion {
+public class Profesion implements Parcelable {
     private boolean valida = true;
     private String nombre;
     private boolean avanzada = false;
-    private HashMap<Stat,Integer> stats;
+    private HashMap<Stat, Integer> stats;
     private String descripcion;
     private String notas;
     private HashMap<NomHab, String> habilidades;
@@ -156,6 +159,35 @@ public class Profesion {
 
     public NomProf[] getSalidas() {
         return salidas;
+    }
+
+
+    /* Parcelable */
+
+    private int mData;
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel out, int flags) {
+        out.writeInt(mData);
+    }
+
+    public static final Parcelable.Creator<Profesion> CREATOR = new Parcelable.Creator<Profesion>() {
+        public Profesion createFromParcel(Parcel in) {
+            return new Profesion(in);
+        }
+
+        public Profesion[] newArray(int size) {
+            return new Profesion[size];
+        }
+    };
+
+    private Profesion(Parcel in) {
+        mData = in.readInt();
     }
 }
 
