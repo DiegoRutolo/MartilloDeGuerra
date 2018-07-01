@@ -201,7 +201,7 @@ public class Diccionario {
         profesiones.put(NomProf.PESCADOR,new Profesion(NomProf.PESCADOR));
         profesiones.put(NomProf.PORTADOR_RUNAS,new Profesion(NomProf.PORTADOR_RUNAS));
         profesiones.put(NomProf.SAQUEADOR_TUMBAS,new Profesion(NomProf.SAQUEADOR_TUMBAS));
-        profesiones.put(NomProf.ROMPESCUDO,new Profesion(NomProf.ROMPESCUDO));
+        profesiones.put(NomProf.ROMPESCUDOS,new Profesion(NomProf.ROMPESCUDOS));
         profesiones.put(NomProf.SICARIO,new Profesion(NomProf.SICARIO));
         profesiones.put(NomProf.SIRVIENTE,new Profesion(NomProf.SIRVIENTE));
         profesiones.put(NomProf.VAGABUNDO,new Profesion(NomProf.VAGABUNDO));

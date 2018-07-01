@@ -26,9 +26,9 @@ public class Profesion implements Parcelable {
         this.notas="";
         this.descripcion="";
 
-        /*
+
         switch (nombre) {   // TODO Completar profesiones
-            case ALBOROTADOR:
+        /*    case ALBOROTADOR:
                 notas = "";
                 stats.put(Stat.HA, 0);
                 stats.put(Stat.HP, 0);
@@ -1795,109 +1795,145 @@ public class Profesion implements Parcelable {
                 salidas = new NomProf[]{
 
                 };
-                break;
+                break; */
             case PORTADOR_RUNAS:
                 notas = "";
-                stats.put(Stat.HA, 0);
+                stats.put(Stat.HA, 10);
                 stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
-                stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                stats.put(Stat.F, 5);
+                stats.put(Stat.R, 5);
+                stats.put(Stat.Ag, 10);
+                stats.put(Stat.I, 5);
+                stats.put(Stat.V, 7);
+                stats.put(Stat.H, 2);
+                stats.put(Stat.M, 1);
+                habilidades.put(NomHab.CODIGO_SECRETO, "Batidor");
+                habilidades.put(NomHab.ESQUIVAR, "");
+                habilidades.put(NomHab.NADAR, "");
+                habilidades.put(NomHab.ORIENTACION, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SUPERVIVENCIA, "");
+                talentos.put(NomTal.A_CORRER, "");
+                talentos.put(NomTal.MUY_RESISTENTE, "");
+                talentos.put(NomTal.MUY_FUERTE, "");
+                talentos.put(NomTal.ORIENTACION, "");
+                talentos.put(NomTal.PIES_LIGEROS, "");
+                talentos.put(NomTal.SEXTO_SENTIDO, "");
+                talentos.put(NomTal.RECARGA_RAPIDA, "");
                 enseres = new String[]{
-
+                        "Ballesta con 10 virotes",
+                        "Armadura ligera (justillo de cuero)",
+                        "Poción curativa",
+                        "Amuleto de buena suerte"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.ROMPESCUDOS
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.BATIDOR,
+                        NomProf.CAZARRATAS,
+                        NomProf.SAQUEADOR_TUMBAS,
+                        NomProf.VETERANO
                 };
                 break;
             case SAQUEADOR_TUMBAS:
                 notas = "";
-                stats.put(Stat.HA, 0);
+                stats.put(Stat.HA, 10);
                 stats.put(Stat.HP, 0);
                 stats.put(Stat.F, 0);
                 stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
+                stats.put(Stat.Ag, 10);
+                stats.put(Stat.I, 10);
+                stats.put(Stat.V, 10);
+                stats.put(Stat.Em, 5);
+                stats.put(Stat.H, 2);
                 stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                habilidades.put(NomHab.BUSCAR, "");
+                habilidades.put(NomHab.ESCALAR, "");
+                habilidades.put(NomHab.ESCONDERSE, "");
+                habilidades.put(NomHab.SUPERVIVENCIA, "");
+                habilidades.put(NomHab.FORZAR_CERRADURAS, "");
+                habilidades.put(NomHab.MOVIMIENTO_SILENCIOSO, "");
+                habilidades.put(NomHab.HABLAR_IDIOMA, "Clásico, Khazalid o Eltharin");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.LEER_ESCRIBIR, "");
+                habilidades.put(NomHab.SABIDURIA_POPULAR, "Imperio");
+                habilidades.put(NomHab.CODIGO_SECRETO, "Ladrón");
+                habilidades.put(NomHab.TASAR, "");
+                talentos.put(NomTal.EXPERTO_TRAMPAS, "");
+                talentos.put(NomTal.PERICIA_SUBTERRANEA, "");
+                talentos.put(NomTal.SUERTE, "");
+                talentos.put(NomTal.SEXTO_SENTIDO, "");
                 enseres = new String[]{
-
+                        "Armadura ligera (chaqueta de cuero)",
+                        "Palanca",
+                        "Lámpara",
+                        "Aceite de lámpara",
+                        "10 metros de cuerda",
+                        "2 sacas"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.LADRON,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.ROMPESCUDOS,
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.CAZARRATAS,
+                        NomProf.CAZAVAMPIROS,
+                        NomProf.LADRON,
+                        NomProf.PERISTA,
+                        NomProf.ROMPESCUDOS
                 };
                 break;
-            case ROMPESCUDO:
+            case ROMPESCUDOS:
                 notas = "";
-                stats.put(Stat.HA, 0);
+                stats.put(Stat.HA, 10);
                 stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
+                stats.put(Stat.F, 5);
+                stats.put(Stat.R, 5);
+                stats.put(Stat.Ag, 10);
                 stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
+                stats.put(Stat.V, 5);
+                stats.put(Stat.A, 1);
+                stats.put(Stat.H, 2);
                 stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                habilidades.put(NomHab.ESCALAR, "");
+                habilidades.put(NomHab.ESQUIVAR, "");
+                habilidades.put(NomHab.ORIENTACION, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SEGUIMIENTO, "");
+                talentos.put(NomTal.GOLPE_CONMOCIONADOR, "");
+                talentos.put(NomTal.GOLPE_LETAL, "");
+                talentos.put(NomTal.GOLPE_PODEROSO, "");
+                talentos.put(NomTal.OIDO_AGUZADO, "");
+                talentos.put(NomTal.SANGRE_FRIA, "");
+                talentos.put(NomTal.ORIENTACION, "");
                 enseres = new String[]{
-
+                        "Ballesta con 10 virotes",
+                        "Armadura media (cota de malla, chaqueta de cuero y grebas de cuero)",
+                        "Escudo",
+                        "Gancho de escalada",
+                        "10 metros de cuerda",
+                        "Odre"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.CAZARRATAS,
+                        NomProf.CONTRABANDISTA,
+                        NomProf.KOSSAR,
+                        NomProf.MERCENARIO,
+                        NomProf.MINERO,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.SAQUEADOR_TUMBAS
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.CONTRABANDISTA,
+                        NomProf.GLADIADOR,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.SAQUEADOR_TUMBAS,
+                        NomProf.SARGENTO,
+                        NomProf.VETERANO
                 };
-                break;
+                break; /*
             case SICARIO:
                 notas = "";
                 stats.put(Stat.HA, 0);
@@ -3871,14 +3907,13 @@ public class Profesion implements Parcelable {
                 };
                 break;
 
-            /*------------------------------------------------------------------------------------*/
 
-            /**
+
+            */
 
             default:
                 valida = false;
         }
-             **/
     }
 
     public boolean isValida() {
