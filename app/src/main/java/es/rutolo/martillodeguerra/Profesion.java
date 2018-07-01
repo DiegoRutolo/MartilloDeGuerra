@@ -542,41 +542,47 @@ public class Profesion implements Parcelable {
                 salidas = new NomProf[]{
 
                 };
-                break;
+                break;*/
             case CAZARRATAS:
                 notas = "";
-                stats.put(Stat.HA, 0);
-                stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
-                stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                stats.put(Stat.HA, 5);
+                stats.put(Stat.HP, 10);
+                stats.put(Stat.R, 5);
+                stats.put(Stat.Ag, 10);
+                stats.put(Stat.V, 10);
+                stats.put(Stat.H, 2);
+                habilidades.put(NomHab.ADIESTRAR_ANIMALES, "");
+                habilidades.put(NomHab.BUSCAR, "");
+                habilidades.put(NomHab.CRIAR_ANIMALES, "");
+                habilidades.put(NomHab.ESCONDERSE, "");
+                habilidades.put(NomHab.MOVIMIENTO_SILENCIOSO, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.PONER_TRAMPAS, "");
+                talentos.put(NomTal.ESPECIALISTA_ARMAS, "Honda");
+                talentos.put(NomTal.PERICIA_SUBTERRANEA, "");
+                talentos.put(NomTal.RESISTENCIA_ENFERMEDADES, "");
+                talentos.put(NomTal.RESISTENCIA_VENENOS, "");
                 enseres = new String[]{
-
+                        "Honda con munición",
+                        "4 trampas para animales",
+                        "Vara larga con 1d10 ratas muertas",
+                        "Perro pequeño pero fiero"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.CARCELERO,
+                        NomProf.LADRON_TUMBAS,
+                        NomProf.PORTADOR_RUNAS,
+                        NomProf.SAQUEADOR_TUMBAS
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.CARCELERO,
+                        NomProf.LADRON,
+                        NomProf.LADRON_GUANTE_BLANCO,
+                        NomProf.LADRON_TUMBAS,
+                        NomProf.OSAMENTERO,
+                        NomProf.ROMPESCUDOS
                 };
-                break;
+                break; /*
             case CAZARRECOMPENSAS:
                 notas = "";
                 stats.put(Stat.HA, 0);
