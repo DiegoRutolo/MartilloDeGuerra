@@ -55,7 +55,7 @@ public enum NomProf{
     PESCADOR("Pescador"),
     PORTADOR_RUNAS("Portador de runas"),
     SAQUEADOR_TUMBAS("Saqueador de tumbas"),
-    ROMPESCUDO("Rompescudos"),
+    ROMPESCUDOS("Rompescudos"),
     SICARIO("Sicario"),
     SIRVIENTE("Sirviente"),
     VAGABUNDO("Vagabundo"),
