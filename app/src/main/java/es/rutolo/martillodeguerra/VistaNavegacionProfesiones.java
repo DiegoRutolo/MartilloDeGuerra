@@ -1,15 +1,19 @@
 package es.rutolo.martillodeguerra;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class VistaNavegacionProfesiones extends AppCompatActivity {
 
-    private NomProf nomProf;
+    private Profesion profesion;
+    private Profesion profParaAbrir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,24 +24,40 @@ public class VistaNavegacionProfesiones extends AppCompatActivity {
         setContentView(R.layout.activity_navegacion_profesiones);
 
         Intent intent = getIntent();
-        nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
-        Profesion profesion = Diccionario.getInstancia().getProfesiones().get(nomProf);
+        NomProf nomProf = NomProf.getNombre(intent.getStringExtra("prof"));
+        profesion = Diccionario.getInstancia().getProfesiones().get(nomProf);
+        profParaAbrir = profesion;
         TextView profCentral = findViewById(R.id.profCentral);
         if (profesion.isValida()) {
-            profCentral.setText(nomProf.toString());
+            profCentral.setText(profesion.getNombre());
         } else {
             profCentral.setText("Pendiente de implementación");
             profCentral.setOnClickListener(null);
         }
 
-        TextView salida1 = findViewById(R.id.salida1);
-        salida1.setText(profesion.getSalidas()[0].toString());
-        salida1.setVisibility(View.VISIBLE);
+
+        /* Escribe las salidas */
+        Resources r = getResources();
+        String name = getPackageName();
+        for (int i = 0; i < profesion.getSalidas().length; i++) {
+            TextView salida = findViewById(r.getIdentifier("salida" + i, "id", name));
+            final String nombreSalida = profesion.getSalidas()[i].toString();
+            salida.setText(nombreSalida);
+            salida.setVisibility(View.VISIBLE);
+
+            salida.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    profParaAbrir = Diccionario.getInstancia().getProfesiones().get(NomProf.getNombre(nombreSalida));
+                    abreDetalles(v);
+                }
+            });
+        }
     }
 
     public void abreDetalles(View view) {
         Intent verDetalles = new Intent(VistaNavegacionProfesiones.this, VistaProfesion.class);
-        verDetalles.putExtra("prof", nomProf.toString());
+        verDetalles.putExtra("prof", profParaAbrir.getNombre());
         VistaNavegacionProfesiones.this.startActivity(verDetalles);
     }
 }

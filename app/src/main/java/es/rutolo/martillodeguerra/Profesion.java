@@ -26,6 +26,11 @@ public class Profesion implements Parcelable {
         this.notas="";
         this.descripcion="";
 
+        // Inicializar stats a 0
+        for (Stat st : Stat.values()) {
+            stats.put(st, 0);
+        }
+
 
         switch (nombre) {   // TODO Completar profesiones
         /*    case ALBOROTADOR:
@@ -1799,7 +1804,6 @@ public class Profesion implements Parcelable {
             case PORTADOR_RUNAS:
                 notas = "";
                 stats.put(Stat.HA, 10);
-                stats.put(Stat.HP, 0);
                 stats.put(Stat.F, 5);
                 stats.put(Stat.R, 5);
                 stats.put(Stat.Ag, 10);
@@ -1839,15 +1843,11 @@ public class Profesion implements Parcelable {
             case SAQUEADOR_TUMBAS:
                 notas = "";
                 stats.put(Stat.HA, 10);
-                stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
                 stats.put(Stat.Ag, 10);
                 stats.put(Stat.I, 10);
                 stats.put(Stat.V, 10);
                 stats.put(Stat.Em, 5);
                 stats.put(Stat.H, 2);
-                stats.put(Stat.M, 0);
                 habilidades.put(NomHab.BUSCAR, "");
                 habilidades.put(NomHab.ESCALAR, "");
                 habilidades.put(NomHab.ESCONDERSE, "");
@@ -1892,11 +1892,9 @@ public class Profesion implements Parcelable {
                 stats.put(Stat.F, 5);
                 stats.put(Stat.R, 5);
                 stats.put(Stat.Ag, 10);
-                stats.put(Stat.I, 0);
                 stats.put(Stat.V, 5);
                 stats.put(Stat.A, 1);
                 stats.put(Stat.H, 2);
-                stats.put(Stat.M, 0);
                 habilidades.put(NomHab.ESCALAR, "");
                 habilidades.put(NomHab.ESQUIVAR, "");
                 habilidades.put(NomHab.ORIENTACION, "");
