@@ -135,5 +135,14 @@ public enum NomProf{
         }
         return valor;
     }
+
+    public static boolean isHere(NomProf nomProf) {
+        for (NomProf n : NomProf.values()) {
+            if (n == nomProf) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 

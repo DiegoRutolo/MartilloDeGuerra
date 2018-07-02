@@ -18,8 +18,8 @@
         </activity>
         <activity android:name=".VistaProfesion" />
         <activity android:name=".VistaHabilidad" />
-        <activity android:name=".VistaTalento"></activity>
-        <activity android:name=".VistaNavegacionProfesiones"></activity>
+        <activity android:name=".VistaTalento" />
+        <activity android:name=".VistaNavegacionProfesiones" />
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package es.rutolo.martillodeguerra;
 
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,8 +12,6 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 public class  MainActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +28,15 @@ public class  MainActivity extends AppCompatActivity {
         TextView text = findViewById(R.id.buscador);
         String msg = text.getText().toString();
 
-        Intent verProfesiones = new Intent(MainActivity.this, VistaNavegacionProfesiones.class);
-        verProfesiones.putExtra("prof", msg);
-        MainActivity.this.startActivity(verProfesiones);
+        if (NomProf.isHere(NomProf.getNombre(msg))) {
+            Intent verProfesiones = new Intent(MainActivity.this, VistaNavegacionProfesiones.class);
+            verProfesiones.putExtra("prof", msg);
+            MainActivity.this.startActivity(verProfesiones);
+        } else {
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Opción inválida").setMessage("Debes elegir una de las opciones dadas");
+            builder.create();
+        }
     }
 
     public void abreHabilidad(View view) {
@@ -99,5 +104,9 @@ public class  MainActivity extends AppCompatActivity {
                 });
                 break;
         }
+    }
+
+    public void verTodo(View view) {
+        ((AutoCompleteTextView) findViewById(R.id.buscador)).showDropDown();
     }
 }
