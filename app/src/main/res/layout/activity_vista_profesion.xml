@@ -23,7 +23,7 @@
         android:id="@+id/tablaStatsCentral"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="48dp"
         android:gravity="fill_horizontal"
         android:padding="0dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,7 +191,7 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/valAG"
+                android:id="@+id/valAg"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -224,7 +224,7 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/valEM"
+                android:id="@+id/valEm"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -381,7 +381,7 @@
                 android:textSize="10sp" />
 
             <TextView
-                android:id="@+id/valAM"
+                android:id="@+id/valM"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"

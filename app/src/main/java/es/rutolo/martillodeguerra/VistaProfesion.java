@@ -1,6 +1,7 @@
 package es.rutolo.martillodeguerra;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -26,5 +27,15 @@ public class VistaProfesion extends AppCompatActivity {
 
         // Escribe el nombre
         text.setText(profesion.getNombre());
+
+        // Escribe los stats
+        Resources r = getResources();
+        String name = getPackageName();
+        for (Stat s : Stat.values()) {
+            TextView caja = findViewById(r.getIdentifier("val".concat(s.toString()), "id", name));
+            if (profesion.getStats().get(s) > 0) {
+                caja.setText("+".concat(profesion.getStats().get(s).toString()));
+            }
+        }
     }
 }
