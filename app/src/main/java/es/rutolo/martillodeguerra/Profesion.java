@@ -33,108 +33,130 @@ public class Profesion implements Parcelable {
 
 
         switch (nombre) {   // TODO Completar profesiones
-        /*    case ALBOROTADOR:
+            case ALBOROTADOR:
                 notas = "";
-                stats.put(Stat.HA, 0);
-                stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
-                stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                stats.put(Stat.HA, 5);
+                stats.put(Stat.HP, 5);
+                stats.put(Stat.Ag, 5);
+                stats.put(Stat.I, 10);
+                stats.put(Stat.Em, 10);
+                stats.put(Stat.H, 2);
+                habilidades.put(NomHab.CARISMA, "");
+                habilidades.put(NomHab.ESCONDERSE, "");
+                habilidades.put(NomHab.HABLAR_IDIOMA, "Bretón o Tileano");
+                habilidades.put(NomHab.HABLAR_IDIOMA, "Reikspiel");
+                habilidades.put(NomHab.LEER_ESCRIBIR, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SABIDURIA_ACADEMICA, "Historia");
+                habilidades.put(NomHab.COTILLEO, "");
+                habilidades.put(NomHab.SABIDURIA_ACADEMICA, "Leyes");
+                habilidades.put(NomHab.SABIDURIA_POPULAR, "Imperio");
+                talentos.put(NomTal.A_CORRER, "");
+                talentos.put(NomTal.DON_GENTES, "");
+                talentos.put(NomTal.SANGRE_FRIA, "");
+                talentos.put(NomTal.PELEA_CALLEJERA, "");
                 enseres = new String[]{
-
+                        "Armadura ligera (chaqueta de cuero)",
+                        "Una muda de ropa de buena artesanía",
+                        "2d10 octavillas para causas diversas"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.BURGUES,
+                        NomProf.CAPITAN,
+                        NomProf.ESCRIBA,
+                        NomProf.ESTUDIANTE,
+                        NomProf.FANATICO,
+                        NomProf.HERALDO,
+                        NomProf.SALTEADOR_CAMINOS,
+                        NomProf.SIRVIENTE
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.BRIBON,
+                        NomProf.CHARLATAN,
+                        NomProf.DEMAGOGO,
+                        NomProf.FANATICO,
+                        NomProf.FORAJIDO,
+                        NomProf.POLITICO
                 };
                 break;
             case APRENDIZ_HECHICERO:
-                notas = "";
-                stats.put(Stat.HA, 0);
-                stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
-                stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                notas = "Si quieres ser capaz de lanzar hechizos, debes aumentar tu característica de Magia con la mejora gratis disponible durante la creación del personaje. Los halflings y enanos no pueden acceder a esta profesión. Los hechiceros son temidos y a veces odiados. Piénsatelo bien antes de escoget esta profesión.";
+                stats.put(Stat.Ag, 5);
+                stats.put(Stat.I, 10);
+                stats.put(Stat.V, 15);
+                stats.put(Stat.Em, 5);
+                stats.put(Stat.H, 2);
+                stats.put(Stat.Mag, 1);
+                habilidades.put(NomHab.BUSCAR, "");
+                habilidades.put(NomHab.HABLAR_IDIOMA, "Clasico");
+                habilidades.put(NomHab.LEER_ESCRIBIR, "");
+                habilidades.put(NomHab.LENGUA_ARCANA, "Magia");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SABIDURIA_ACADEMICA, "Magia");
+                habilidades.put(NomHab.SENTIR_MAGIA, "");
+                talentos.put(NomTal.AFINIDAD_AETHYR, "");
+                talentos.put(NomTal.MANOS_RAPIDAS, "");
+                talentos.put(NomTal.INTELECTUAL, "");
+                talentos.put(NomTal.MUY_RESISTENTE, "");
+                talentos.put(NomTal.MAGIA_PUERIL, "Arcana");
                 enseres = new String[]{
-
+                        "Báculo",
+                        "Mochila",
+                        "Libro impreso"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.ERUDITO,
+                        NomProf.ESCRIBA,
+                        NomProf.ESTUDIANTE,
+                        NomProf.HECHICERO_VULGAR
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.ERUDITO,
+                        NomProf.ESCRIBA,
+                        NomProf.HECHICERO_ADEPTO
                 };
                 break;
             case ALGUACIL:
                 notas = "";
-                stats.put(Stat.HA, 0);
-                stats.put(Stat.HP, 0);
-                stats.put(Stat.F, 0);
-                stats.put(Stat.R, 0);
-                stats.put(Stat.Ag, 0);
-                stats.put(Stat.I, 0);
-                stats.put(Stat.V, 0);
-                stats.put(Stat.H, 0);
-                stats.put(Stat.M, 0);
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                habilidades.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
-                talentos.put(, "");
+                stats.put(Stat.HA, 5);
+                stats.put(Stat.HP, 5);
+                stats.put(Stat.F, 5);;
+                stats.put(Stat.I, 10);
+                stats.put(Stat.V, 5);
+                stats.put(Stat.Em, 10);
+                stats.put(Stat.H, 2);
+                habilidades.put(NomHab.CARISMA, "");
+                habilidades.put(NomHab.CRIAR_ANIMALES, "");
+                habilidades.put(NomHab.COTILLEO, "");
+                habilidades.put(NomHab.INTIMIDAR, "");
+                habilidades.put(NomHab.SABIDURIA_POPULAR, "Imperio");
+                habilidades.put(NomHab.LEER_ESCRIBIR, "");
+                habilidades.put(NomHab.MANDO, "");
+                habilidades.put(NomHab.ORIENTACION, "");
+                habilidades.put(NomHab.MONTAR, "");
+                habilidades.put(NomHab.PERCEPCION, "");
+                habilidades.put(NomHab.SABIDURIA_ACADEMICA, "Leyes");
+                talentos.put(NomTal.DON_GENTES, "");
+                talentos.put(NomTal.ETIQUETA, "");
+                talentos.put(NomTal.GENIO_ARITMETICO, "");
                 enseres = new String[]{
-
+                        "Armadura ligera (chaqueta de cuero y gorro de cuero)",
+                        "Caballo de monta con silla y arreos",
+                        "Una muda de ropa de buena artesanía"
                 };
                 accesos = new NomProf[]{
-
+                        NomProf.CARCELERO,
+                        NomProf.GUARDAESPALDAS
                 };
                 salidas = new NomProf[]{
-
+                        NomProf.CONTRABANDISTA,
+                        NomProf.EXTORSIONADOR,
+                        NomProf.MILICIANO,
+                        NomProf.PEAJERO,
+                        NomProf.POLITICO,
+                        NomProf.SICARIO
                 };
-                break;
+                break;  /*
             case ARTISTA:
                 notas = "";
                 stats.put(Stat.HA, 0);
