@@ -68,7 +68,6 @@ public class Habilidad {
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
-                    // TODO Varios: batidor, templario, ladron, montaraz
                 break;
             case CONDUCIR:
                 avanzada=false;
@@ -132,7 +131,6 @@ public class Habilidad {
                 talentos.add(NomTal.IMITADOR);
                 talentos.add(NomTal.LINGUISTICA);
                 talentos.add(NomTal.VIAJERO_CURTIDO);
-                        //TODO Varios: breton, eltharin, estaliano, halfling, khazalid, kisleviano, nordico, reikspiel, tileano, clasico, oscura, goblin, grumbarth
                 break;
             case HIPNOTISMO:
                 avanzada=true;
@@ -172,13 +170,11 @@ public class Habilidad {
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
-                        // TODO Varios: Magia, demoniaca, elfico arcano
                 break;
             case LENGUA_SECRETA:
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
-                        //TODO Varios: militar, ladrones, montaraz
                 break;
             case MANDO:
                 avanzada=false;
@@ -281,14 +277,12 @@ public class Habilidad {
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
-                        // TODO Varios: Arte, astronomia, ciencias, demonologia, estrategia, filosofia, genealogia, historia, ingenieria, leyes, magia, nigromancia, runas, teología
                 break;
             case SABIDURIA_POPULAR:
                 avanzada=true;
                 caracteristica=Stat.I;
                 descripcion="";
                 talentos.add(NomTal.VIAJERO_CURTIDO);
-                        // TODO Varios: bretonia,elfos, enanos, estalia, halflings, imperio, kislev, norsca, ogros, reinos fronterizos, tierras desoladas, tilea
                 break;
             case SANAR:
                 avanzada=true;

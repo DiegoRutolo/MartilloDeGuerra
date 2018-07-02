@@ -24,26 +24,26 @@
         android:id="@+id/salida0"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="104dp"
         android:text="TextView"
         android:textSize="18sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/profCentral"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/salida1"
         android:layout_width="wrap_content"
-        android:layout_height="31dp"
-        android:layout_marginBottom="196dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="212dp"
         android:text="TextView"
         android:textSize="18sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/profCentral"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -102,26 +102,130 @@
         android:id="@+id/salida6"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="156dp"
         android:text="TextView"
         android:textSize="18sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/profCentral"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.616"
+        app:layout_constraintHorizontal_bias="0.667"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/salida7"
         android:layout_width="wrap_content"
         android:layout_height="31dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="24dp"
         android:text="TextView"
         android:textSize="18sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/profCentral"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.822"
+        app:layout_constraintHorizontal_bias="0.767"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/acceso0"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="104dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso1"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="24dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso2"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="144dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso3"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso4"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="104dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso5"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="188dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso6"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
+
+    <TextView
+        android:id="@+id/acceso7"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginTop="156dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.667"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profCentral" />
 
 </android.support.constraint.ConstraintLayout>

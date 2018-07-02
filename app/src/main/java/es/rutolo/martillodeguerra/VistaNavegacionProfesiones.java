@@ -36,7 +36,8 @@ public class VistaNavegacionProfesiones extends AppCompatActivity {
         }
 
 
-        /* Escribe las salidas */
+        /* Escribe accesos y salidas */
+        // TODO dibujar un fondo chupichuli con flechas y esas cosas
         Resources r = getResources();
         String name = getPackageName();
         for (int i = 0; i < profesion.getSalidas().length; i++) {
@@ -49,6 +50,20 @@ public class VistaNavegacionProfesiones extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     profParaAbrir = Diccionario.getInstancia().getProfesiones().get(NomProf.getNombre(nombreSalida));
+                    abreDetalles(v);
+                }
+            });
+        }
+        for (int i = 0; i < profesion.getAccesos().length; i++) {
+            TextView acceso = findViewById(r.getIdentifier("acceso" + i, "id", name));
+            final String nombreAcceso = profesion.getAccesos()[i].toString();
+            acceso.setText(nombreAcceso);
+            acceso.setVisibility(View.VISIBLE);
+
+            acceso.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    profParaAbrir = Diccionario.getInstancia().getProfesiones().get(NomProf.getNombre(nombreAcceso));
                     abreDetalles(v);
                 }
             });
