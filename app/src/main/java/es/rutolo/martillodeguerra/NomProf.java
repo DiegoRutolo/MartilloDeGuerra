@@ -5,7 +5,7 @@ public enum NomProf{
     APRENDIZ_HECHICERO("Aprendiz de hechicero"),
     ALGUACIL("Alguacil"),
     ARTISTA("Artista"),
-    AYUDANTE_CAMARA("Ayudante de cámara"),
+    AYUDA_CAMARA("Ayudante de cámara"),
     BARQUERO("Barquero"),
     BARBERO_CIRUJANO("Barbero cirujano"),
     BATELERO("Batelero"),

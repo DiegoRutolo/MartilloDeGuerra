@@ -151,7 +151,7 @@ public class Diccionario {
         profesiones.put(NomProf.APRENDIZ_HECHICERO,new Profesion(NomProf.APRENDIZ_HECHICERO));
         profesiones.put(NomProf.ALGUACIL,new Profesion(NomProf.ALGUACIL));
         profesiones.put(NomProf.ARTISTA,new Profesion(NomProf.ARTISTA));
-        profesiones.put(NomProf.AYUDANTE_CAMARA,new Profesion(NomProf.AYUDANTE_CAMARA));
+        profesiones.put(NomProf.AYUDA_CAMARA,new Profesion(NomProf.AYUDA_CAMARA));
         profesiones.put(NomProf.BARQUERO,new Profesion(NomProf.BARQUERO));
         profesiones.put(NomProf.BARBERO_CIRUJANO,new Profesion(NomProf.BARBERO_CIRUJANO));
         profesiones.put(NomProf.BATELERO,new Profesion(NomProf.BATELERO));

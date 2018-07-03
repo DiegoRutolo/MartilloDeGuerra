@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 public class VistaProfesion extends AppCompatActivity {
@@ -25,10 +27,9 @@ public class VistaProfesion extends AppCompatActivity {
         Profesion profesion = Diccionario.getInstancia().getProfesiones().get(nomProf);
         TextView text = findViewById(R.id.tvNombreGrande);
 
-        // Escribe el nombre
+        // Escribe los datos
         text.setText(profesion.getNombre());
 
-        // Escribe los stats
         Resources r = getResources();
         String name = getPackageName();
         for (Stat s : Stat.values()) {
@@ -37,5 +38,12 @@ public class VistaProfesion extends AppCompatActivity {
                 caja.setText("+".concat(profesion.getStats().get(s).toString()));
             }
         }
+
+        ((TextView) findViewById(R.id.tvNota)).setText(profesion.getNotas());
+
+        /*
+        RecyclerView rcvHabs = findViewById(R.id.rcvHabs);
+        ArrayAdapter<NomHab> habAdapter = new ArrayAdapter<>(this, android.R.layout.list_content, NomHab.values());
+        rcvHabs.setAdapter(habAdapter); */
     }
 }
